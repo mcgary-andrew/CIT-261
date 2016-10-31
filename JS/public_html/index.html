@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CIT 261</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>JavaScript Loops</h1>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25};
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+var text2 = "";
+var a = 0;
+while (a < 10) {
+    text2 += "<br>The number is " + a;
+    a++;
+}
+document.getElementById("demo").innerHTML = text + "<br>" + text2 + "<br><br>" + txt;
+
+function myFunction() {
+    var hour = new Date().getHours();
+    var greeting;
+    if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("demo2").innerHTML = greeting;
+}
+</script>
+
+<h1>JavaScript Conditional Statements</h1>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo2"></p>
+
+
+<h1>JavaScript Functions</h1>
+
+<p>This example calls a function which performs a calculation and returns the result:</p>
+
+<p id="demo3"></p>
+
+<script>
+function myFunction(a, b, c) {
+    return a * b * c;
+}
+document.getElementById("demo3").innerHTML = myFunction(4, 3, 5);
+</script>
+<h1>JavaScript Arrays</h1>
+<p id="demo4"></p>
+
+<script>
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo4").innerHTML = cars;
+</script>
+
+<h1>Creating a JavaScript Object.</h1>
+
+<p id="demo5"></p>
+
+<script>
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+document.getElementById("demo5").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+<p>
+There are two different ways to access an object property:
+</p>
+<p>You can use person.property or person["property"].</p>
+
+<p id="demo6"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       :  5566
+};
+document.getElementById("demo6").innerHTML =
+person.firstName + " " + person.lastName;
+</script>
+    </body>
+</html>
