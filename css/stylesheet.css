@@ -1,0 +1,117 @@
+
+body {
+    background-image: url("andrewcamo.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color:#f1690e;
+    font-size: 14pt;
+}
+body#wynt{
+    background-image: url("wyntercamo.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: black;
+    font-size: 14pt;
+}
+h1{
+    color: #f1690e;
+    text-align: center;
+}
+table#head{
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 125%;
+}
+table#t02{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 50%;
+}
+table#foot{
+    font-size: 10px;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+table#wynt1{
+    background-color: pink;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+.tTP{
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+img#picgallery{
+    height: 300px;
+    width: 300px;
+}
+
+.header-link:link,
+.header-link:hover,
+.header-link:visited,
+.header-link:active,
+.header-link,
+.body-link:link,
+.body-link:hover,
+.body-link:visited,
+.body-link:active,
+.body-link{
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.header-link:link,
+.header-link:visited,
+.header-link{
+    color: #f1690e;
+}
+.header-link:hover,
+.header-link:active{
+    color:#97721b;
+}
+.body-link:link,
+.body-link:visited,
+.body-link{
+    color: #97721b;
+}
+.body-link:hover,
+.body-link:active{
+    color:#ee3a2c;
+}
+.sketch{
+    width: 25%;
+    height: 25%;
+}
+@media screen and (max-device-width: 1024px){
+    #page   {width: 100%;}
+    nav        {width: 90%;}
+    img         {width: 70%;}
+
+}
+@media screen and (max-device-width: 600px) and (orientation: portrait), 
+screen and (max-device-width: 768px) and (orientation: landscape) {
+    #page      {width: 70%;}
+    nav        {width: 60%;}
+    img  {width: 50%;
+          height: 50%}
+}
+
+@media screen and (max-device-width: 320px) and (orientation: portrait), screen and
+(max-device-width: 480px) and (orientation: landscape)  {
+    #page       {width: 50%}
+    nav        {width: 40%;}
+    img         {width: 40%;
+                height: 40%;}
+}
