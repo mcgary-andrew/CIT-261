@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>appendChild: </h1>
+        <div id="div1">
+            <p id="p1">This is a paragraph.</p>
+            <p id="p2">This is another paragraph.</p>
+        </div>
+        <h1>insertBefore</h1>
+        <div id="div2">
+            <p id="p3">This is a paragraph.</p>
+            <p id="p4">This is another paragraph.</p>
+        </div>
+        <h1>removeChild</h1>
+        <div id="div3">
+            <p id="p5">This is a paragraph.</p>
+            <p id="p6">This is another paragraph.</p>
+        </div>
+        <h1>replaceChild</h1>
+        <div id="div4">
+            <p id="p7">This is a paragraph.</p>
+            <p id="p8">This is another paragraph.</p>
+        </div>
+
+        <script>
+            //This is how you append a child property to an element
+            var para = document.createElement("p");
+            var node = document.createTextNode("This is new.");
+            para.appendChild(node);
+            var element = document.getElementById("div1");
+            element.appendChild(para);
+
+            var para2 = document.createElement("p");
+            var node2 = document.createTextNode("This is new.");
+            para2.appendChild(node2);
+            //This is how to add an item before a list.
+            var element2 = document.getElementById("div2");
+            var child = document.getElementById("p3");
+            element2.insertBefore(para2, child);
+            //This is how you can remove a item from a list.
+            var parent = document.getElementById("div3");
+            var child2 = document.getElementById("p5");
+            parent.removeChild(child2);
+            //This is how you can replace an item.
+            var parent2 = document.getElementById("div4");
+            var child3 = document.getElementById("p7");
+            var para3 = document.createElement("p");
+            var node3 = document.createTextNode("This is new.");
+            para3.appendChild(node3);
+            parent2.replaceChild(para3, child3);
+        </script>
+
+    </body>
+</html>
