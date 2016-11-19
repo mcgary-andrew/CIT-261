@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>New HMTL document by NewJect</title>
+<style>
+    #circle{
+        position: absolute;
+        display: block;
+        background-color: brown;
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        -webkit-animation: move 2s;
+        animation: move 2s;
+    }
+    
+    @-webkit-keyframes move{
+        0% {left: 0;}
+        50% {left: 100%;}
+        100% {left: 0;}
+    }
+    
+    @keyframes move{
+        0% {left: 0;}
+        50% {left: 100%;}
+         100% {left: 0;}
+    }
+    </style>
+</head>
+<body>
+
+   
+<div id="circle" onclick="changeColor()">
+</div>
+   
+ <script>
+var a = document.getElementById('circle');
+        
+// Code for Chrome, Safari and Opera
+a.addEventListener("webkitAnimationStart", myStartFunction);
+// Standard syntax
+a.addEventListener("animationstart", myStartFunction);
+function myStartFunction(event) {
+this.innerHTML = "The animation name and the elapse time is: " + "<br>" + event.animationName + "<br> " + event.elapsedTime;
+}
+     function changeColor(){
+         document.getElementById('circle').style.backgroundColor='yellow';
+     }
+     
+    </script>
+</body>
+</html>
